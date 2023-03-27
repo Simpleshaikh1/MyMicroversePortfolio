@@ -7,6 +7,7 @@
   margin-left: 30%;
   width: 23.4vw;
   background-color: #e5e5e5;
+  display: grid;
 }
 
 .top-container {
