@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+  font-family: Poppins;
+}
+
+.wrapper {
+  width: 375px;
+  background-color: #e5e5e5;
+  display: grid;
+}
+
+.top-container {
+  padding: 2%;
+  background-color: white;
+  border-bottom-left-radius: 10%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30%;
+  width: 85%;
+}
+
+.left-text {
+  font-weight: 700;
+  color: #6070ff;
+  text-decoration: none;
+}
+
+.top-body-background {
+  background-image: url("../assets/header-shapes\ mobile.png");
+  background-size: contain;
+  background-position: 1ch -1em;
+  background-repeat: no-repeat;
+}
+
+.top-body {
+  justify-items: center;
+}
+
+.top-body h1 {
+  margin-bottom: 0%;
+  font-size: 35px;
+  font-weight: bolder;
+  padding: 5px;
+  width: 70%;
+  color: #172b4d;
+}
+
+.top-body p {
+  width: 75%;
+  margin-bottom: 5%;
+  color: #344563;
+}
+
+.footer-connect {
+  margin-bottom: 7%;
+  color: #7f8cff;
+  text-decoration: none;
+}
+
+.footer-connect a {
+  text-decoration: none;
+  font-size: large;
+}
+
+.top-footer {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40%;
+  list-style: none;
+}
