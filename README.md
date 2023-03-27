@@ -1,4 +1,4 @@
- # [My-Portfolio]
+ # My-Portfolio
 
 #### My portfolio is a beautiful project that has all my projects in it.
 
@@ -30,6 +30,11 @@
  7. Linters
 
 ## To get a local copy up and running, follow these steps:
+
+- click on the portfolio file
+- navigate to clone and copy the link
+- Clone by http or ssh (i'll advice you clone with ssh)
+- go to your vsCode and use the git clone command to clone the project to your local space. 
 
 ## Prerequisites:
 
