@@ -37,16 +37,23 @@
   background-size: contain;
   background-position: 1ch -1em;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 630px;
 }
 
 .top-body {
-  justify-items: center;
+  justify-content: center;
 }
 
 .top-body h1 {
   margin-bottom: 0%;
-  font-size: 35px;
-  font-weight: bolder;
+  font-size: 40px;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
   padding: 5px;
   width: 70%;
   color: #172b4d;
@@ -78,6 +85,7 @@
 }
 
 .second-container {
+  margin-top: 10%;
   padding-left: 3%;
   padding-right: 3%;
   border-radius: 0 0 0 0;
@@ -311,6 +319,8 @@
   padding-bottom: 0;
   background-color: #6070ff;
   background-image: url("../assets/header-shapes\ mobile.png");
+  background-size: contain;
+  background-repeat: no-repeat;
   border-top-left-radius: 15%;
 }
 
@@ -336,6 +346,7 @@
 
 form .text {
   width: 90%;
+  display: flex;
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 5%;
@@ -360,6 +371,46 @@ form #type-msg {
   border-radius: 10px;
   border: none;
   color: #6070ff;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.sec-btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+/* stylelint-disable-next-line selector-pseudo-element-colon-notation */
+.sec-btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+/* stylelint-disable-next-line selector-pseudo-element-colon-notation */
+.sec-btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.sec-btn:hover span {
+  padding-right: 25px;
+}
+
+.sec-btn:hover {
+  background-color: rgb(91, 91, 238);
+  color: white;
+}
+
+.sec-btn:active {
+  background-color: #5a38f6;
+  box-shadow: 0 2px rgb(127, 160, 251);
+  transform: translateY(4px);
 }
 
 .dot {
