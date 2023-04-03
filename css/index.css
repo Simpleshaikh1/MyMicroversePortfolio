@@ -23,13 +23,22 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 30%;
-  width: 85%;
+}
+
+.my-logo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30%;
 }
 
 .left-text {
   font-weight: 700;
   color: #6070ff;
   text-decoration: none;
+}
+
+.nav-list {
+  display: none;
 }
 
 .top-body-background {
@@ -436,3 +445,46 @@ form #type-msg {
 #hr {
   margin-bottom: 20px;
 }
+
+/* Undisplays on mobile */
+.nav-list {
+  display: none;
+}
+
+/* Desktop version */
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .top-container {
+    border: 1px solid green;
+  }
+
+  .wrapper {
+    width: 100vw;
+    margin: 0 auto;
+    border: 2px solid blue;
+  }
+
+  .right-hamburger img {
+    display: none;
+  }
+
+  .header {
+    width: 80%;
+
+  }
+
+  .nav-list {
+    /* border: 1px solid red; */
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 20vw;
+    text-align: center;
+    color: #344563;
+  }
+
+} 
