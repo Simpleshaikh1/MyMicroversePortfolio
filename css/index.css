@@ -312,6 +312,10 @@
   margin-bottom: 8%;
 }
 
+.section-background {
+  background: white;
+}
+
 .section {
   padding-top: 4%;
   padding-right: 5%;
@@ -349,7 +353,7 @@ form .text {
   display: flex;
   padding: 10px;
   border-radius: 10px;
-  margin-bottom: 5%;
+  margin-bottom: 0.5%;
   border: none;
 }
 
