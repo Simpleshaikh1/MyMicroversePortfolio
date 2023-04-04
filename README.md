@@ -1,6 +1,29 @@
- # My-Portfolio
+# 📗 Table of Contents
 
-#### My portfolio is a beautiful project that has all my projects in it.
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ (OPTIONAL)](#faq)
+- [📝 License](#license)
+
+
+# 📖 [My Microverse Porfoilo] <a name="about-project"></a>
+
+> This is my second Microverse project. This project is called My Microverse Portfoilo and in this project, I am creating a website that contains all of my info as a software developer.
 
 ## 🛠 Built With
 
