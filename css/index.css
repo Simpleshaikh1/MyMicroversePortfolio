@@ -331,9 +331,6 @@
 .contact-me-section {
   margin-top: 80px;
   margin-bottom: 40px;
-}
-
-.contact-me-section p {
   text-align: center;
   color: white;
 }
@@ -350,15 +347,17 @@
 
 form .text {
   width: 90%;
+  font-size: 1.2rem;
   display: flex;
   padding: 10px;
   border-radius: 10px;
-  margin-bottom: 0.5%;
+  margin-bottom: 5%;
   border: none;
 }
 
 form #type-msg {
   width: 90%;
+  height: 30vh;
   padding-left: 15px;
   padding-bottom: 50%;
   border-radius: 10px;
