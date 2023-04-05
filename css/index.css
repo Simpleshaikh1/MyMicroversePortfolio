@@ -472,7 +472,8 @@ form #type-msg {
 
 @media only screen and (min-width: 768px) {
   .wrapper {
-    width: 768px;
+    width: auto;
+    overflow: hidden;
   }
 
   .right-hamburger {
@@ -487,13 +488,64 @@ form #type-msg {
 
   .nav-li > a {
     text-decoration: none;
-    display: flex;
-    justify-content: space-between;
+    margin: 0 1rem;
   }
 
   .top-body-background {
     background-size: cover;
-    background-position: 4ch;
+    background-position: 4ch em;
     background-repeat: no-repeat;
+    height: 630px;
+  }
+
+  .top-body {
+    height: 30vh;
+  }
+
+  .top-body h1 {
+    width: 60%;
+  }
+
+  .top-body p {
+    width: 80%;
+  }
+
+  .footer-connect {
+    margin-bottom: 3%;
+  }
+
+  .top-footer {
+    width: 25%;
+  }
+
+  .inner-second-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .inner-second-containerl {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+  }
+
+  .same {
+    flex: 0 0 calc(50% - 2rem);
+  }
+
+  .top-image img {
+    width: 100%;
+    border: 1px solid green;
+  }
+
+  .text-inner-container {
+    width: 80%;
+    margin-right: 5%;
+    border: 1px solid red;
   }
 }
