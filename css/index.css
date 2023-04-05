@@ -493,7 +493,7 @@ form #type-msg {
 
   .top-body-background {
     background-size: cover;
-    background-position: 4ch em;
+    background-position: 4ch;
     background-repeat: no-repeat;
   }
 }
