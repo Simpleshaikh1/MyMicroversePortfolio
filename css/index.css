@@ -28,6 +28,11 @@
   text-align: center;
 }
 
+/* desktop nav */
+.nav-li {
+  display: none;
+}
+
 .left-text {
   font-weight: 700;
   font-style: normal;
@@ -463,4 +468,32 @@ form #type-msg {
 
 #hr {
   margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    width: 768px;
+  }
+
+  .right-hamburger {
+    display: none;
+  }
+
+  .nav-li {
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-li > a {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .top-body-background {
+    background-size: cover;
+    background-position: 4ch em;
+    background-repeat: no-repeat;
+  }
 }
