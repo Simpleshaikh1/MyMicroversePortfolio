@@ -200,7 +200,7 @@
 .canopy-list li {
   background-color: #ebebff;
   border-radius: 10px;
-  padding: 5px 8px;
+  padding: 4px 4px;
   color: #6070ff;
   list-style: none;
 }
@@ -620,7 +620,12 @@ form #type-msg {
     margin-right: 5%;
   }
 
+  .canopy-inner-container {
+    width: 50%;
+  }
+
   .canopy-inner-container ul {
+    gap: 1rem;
     width: 60%;
     margin-left: 5%;
   }
@@ -628,16 +633,18 @@ form #type-msg {
   .canopy-list {
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    gap: 0.2rem;
+    width: 45%;
   }
 
   .all-button {
     margin: 40px 0;
+    width: 30%;
   }
 
   .third-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 40% 1fr;
     grid-gap: 0;
     width: 95%;
     margin: 0 auto;
@@ -695,6 +702,16 @@ form #type-msg {
   .form-section {
     width: 50%;
     margin-left: 30%;
+  }
+
+  form .text {
+    border-radius: 0%;
+  }
+
+  form #type-msg {
+    border-radius: 0%;
+    width: 89%;
+    height: 5vh;
   }
 
   .dot {
