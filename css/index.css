@@ -13,6 +13,14 @@
   display: grid;
 }
 
+.desktop-first-card {
+  display: none;
+}
+
+.lang-img {
+  display: none;
+}
+
 .top-container {
   background-color: white;
   border-bottom-left-radius: 10%;
@@ -39,6 +47,8 @@
   font-size: 18px;
   color: #6070ff;
   text-decoration: none;
+  animation-name: rotation;
+  animation-duration: 6s;
 }
 
 .top-body-background {
@@ -50,6 +60,24 @@
   flex-direction: column;
   justify-content: center;
   height: 630px;
+}
+
+@keyframes rotation {
+  0% { transform: rotate(0deg); }
+  16% { transform: rotate(180deg); }
+  50% { transform: rotate(360deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.top-image {
+  /* stylelint-disable-next-line length-zero-no-unit */
+  filter: blur(0px);
+  animation-name: rotation;
+  animation-duration: 6s;
+}
+
+.top-image:hover {
+  filter: blur(3px);
 }
 
 .top-body {
@@ -567,6 +595,24 @@ form #type-msg {
 
   .top-image img {
     width: 100%;
+  }
+
+  @keyframes rotation {
+    0% { transform: rotate(0deg); }
+    16% { transform: rotate(180deg); }
+    50% { transform: rotate(360deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .top-image {
+    /* stylelint-disable-next-line length-zero-no-unit */
+    filter: blur(0px);
+    animation-name: rotation;
+    animation-duration: 6s;
+  }
+
+  .top-image:hover {
+    filter: blur(3px);
   }
 
   .text-inner-container {
