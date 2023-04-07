@@ -203,7 +203,7 @@
   padding: 3px 3px;
   margin: 1px;
   color: #6070ff;
-  /* list-style: ; */
+  list-style: none;
 }
 
 .all-button {
@@ -211,7 +211,7 @@
   width: 50%;
   border-radius: 10px;
   margin: 20px 0;
-  padding: 15px 5px;
+  padding: 13px 3px;
   color: #396df2;
   font-size: large;
 }
