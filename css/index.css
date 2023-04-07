@@ -208,6 +208,7 @@
 
 .all-button {
   border: 1px solid #396df2;
+  background-color: white;
   width: 50%;
   border-radius: 10px;
   margin: 20px 0;
@@ -631,6 +632,10 @@ form #type-msg {
     justify-content: space-between;
     gap: 0.2rem;
     width: 45%;
+  }
+
+  .canopy-list li {
+    padding: 8px;
   }
 
   .all-button {
