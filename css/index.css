@@ -14,11 +14,11 @@
 }
 
 .desktop-first-card {
-  display: none;
+  /* display: none; */
 }
 
 .lang-img {
-  display: none;
+  /* display: none; */
 }
 
 .top-container {
@@ -200,9 +200,10 @@
 .canopy-list li {
   background-color: #ebebff;
   border-radius: 10px;
-  padding: 4px 4px;
+  padding: 3px 3px;
+  margin: 1px;
   color: #6070ff;
-  list-style: none;
+  /* list-style: ; */
 }
 
 .all-button {
