@@ -44,7 +44,7 @@
 }
 
 .top-body-background {
-  background-image: url("../assets/header-shapes\ mobile.png");
+  background-image: url("./assets/header-shapes\ mobile.png");
   background-size: contain;
   background-position: 1ch -1em;
   background-repeat: no-repeat;
@@ -377,7 +377,7 @@
 .section {
   margin-top: 20%;
   background-color: #6070ff;
-  background-image: url("../assets/header-shapes\ mobile.png");
+  background-image: url("./assets/header-shapes\ mobile.png");
   background-size: contain;
   background-repeat: no-repeat;
   border-top-left-radius: 15%;
