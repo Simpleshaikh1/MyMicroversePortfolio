@@ -38,6 +38,10 @@
 - [HTML] : This is a Markup Language use to achieve the project
 - [Linters] : This is a tool used in the project to avoide coding error and professionality
 
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://simpleshaikh1.github.io/portfolio.github.io/)
+
 
 
 ## 💻 Getting Started
