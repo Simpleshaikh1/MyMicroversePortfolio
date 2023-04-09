@@ -13,14 +13,6 @@
   display: grid;
 }
 
-.desktop-first-card {
-  /* display: none; */
-}
-
-.lang-img {
-  /* display: none; */
-}
-
 .top-container {
   background-color: white;
   border-bottom-left-radius: 10%;
