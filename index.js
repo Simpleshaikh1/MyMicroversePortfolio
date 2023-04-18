@@ -1,9 +1,20 @@
-const hamburger = document.getElementsByClassName('right-hamburger');
-const navMenu = document.getElementsByClassName('nav-li');
+const hamburgMenu = document.querySelector('.right-hamburger')
+const menuList = document.querySelector('.nav-li')
+const lists = document.querySelector('.lis')
+const xMen = document.querySelector('.x-men')
+const otherLink = document.querySelector('.lis')
 
-function openNav() {
-    hamburger.style.display = "none";
-    navMenu.style.display = "block";
-}
+hamburgMenu.addEventListener('click', function() {
+    menuList.classList.toggle('nav-active')
+})
 
-console.log(hamburger)
+xMen.addEventListener('click', function() {
+    menuList.classList.toggle('nav-active')
+})
+
+menuList.addEventListener('click', function() {
+    menuList.classList.toggle('nav-active')
+})
+
+
+
