@@ -12,9 +12,9 @@ xMen.addEventListener('click', function() {
     menuList.classList.toggle('nav-active')
 })
 
-menuList.addEventListener('click', function() {
-    menuList.classList.toggle('nav-active')
-})
+
+
+
 
 
 
