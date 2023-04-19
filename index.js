@@ -7,7 +7,7 @@ hamburgMenu.addEventListener('click', () => {
 });
 
 xMen.addEventListener('click', () => {
-  menuList.classList.toggle('nav-active');
+  xMen.classList.toggle('nav-active');
 });
 
 menuList.addEventListener('click', () => {

@@ -39,7 +39,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-around;
   overflow-y: scroll;
   width: 100%;
   text-align: left;
@@ -52,9 +51,11 @@
 
 .nav-li a {
   text-align: left;
+  margin-bottom: 3rem;
   color: white;
   text-decoration: none;
   font-weight: bolder;
+  font-size: xx-large;
 }
 
 .nav-active {
@@ -67,6 +68,7 @@
 
 .x-men {
   display: flex;
+  margin-bottom: 2rem;
   justify-content: flex-end;
   width: 90%;
   cursor: pointer;
