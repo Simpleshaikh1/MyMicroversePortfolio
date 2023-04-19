@@ -30,7 +30,49 @@
 
 /* desktop nav */
 .nav-li {
-  display: none;
+  position: fixed;
+  height: 100vh;
+  z-index: 1;
+  right: 0;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: scroll;
+  width: 100%;
+  text-align: left;
+  background: #6070ffba;
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in;
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+}
+
+.nav-li a {
+  text-align: left;
+  margin-bottom: 3rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+.nav-active {
+  transform: translateY(0);
+}
+
+.right-hamburger {
+  cursor: pointer;
+}
+
+.x-men {
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: flex-end;
+  width: 90%;
+  cursor: pointer;
+  color: white;
 }
 
 .left-text {

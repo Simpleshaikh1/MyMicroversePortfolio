@@ -9,27 +9,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link rel="stylesheet" href="./index.css" />
+    <script defer src="./index.js"></script>
     <title>Toyyib</title>
   </head>
   <body>
 
     <div class="wrapper">
+
         <div class="top-container">
     
             <div class="header">
     
                 <a href="#" class="left-text">My Logo</a>
     
-                <nav class="right-hamburger">
+                <nav class="right-hamburger" id="hamburger">
     
-                    <img src="./assets/Union.png" alt="">
+                    <img src="./assets/Union.png" alt="" >
     
                 </nav>
 
                 <nav class="nav-li">
-                    <a href="#">Portfolio</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
+                    <div class="x-men"><span>X</span></div>
+
+                    <a href="#portfolio" class="lis active">Portfolio</a>
+                    <a href="#about" class="lis">About</a>
+                    <a href="#contact" class="lis">Contact</a>
+
                 </nav>
     
             </div>
@@ -72,7 +77,7 @@
         </div>
         <!-- returning other part after pr -->
 
-        <section class="second-container">
+        <section class="second-container" id="portfolio">
     
             <div class="inner-second-container">
         
@@ -294,7 +299,7 @@
         
         </section>
         
-        <div class="third-container">
+        <div class="third-container" id="about">
 
                 <div class="lower-body">
         
@@ -414,7 +419,7 @@
         
         </div>
 
-        <div class="section-background">
+        <div class="section-background" id="contact">
 
             <div class="section">
 
