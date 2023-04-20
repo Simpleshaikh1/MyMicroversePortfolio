@@ -14,8 +14,7 @@ menuList.addEventListener('click', () => {
   menuList.classList.toggle('nav-active');
 });
 
-
-//cards
+// cards
 
 const projectDetails = [
   {
@@ -32,7 +31,7 @@ const projectDetails = [
     skills: {
       skill1: 'html',
       skill2: 'css',
-      skill3: 'javaScript'
+      skill3: 'javaScript',
     },
   },
 
@@ -50,7 +49,7 @@ const projectDetails = [
     skills: {
       skill1: 'html',
       skill2: 'css',
-      skill3: 'javaScript'
+      skill3: 'javaScript',
     },
   },
 
@@ -68,7 +67,7 @@ const projectDetails = [
     skills: {
       skill1: 'html',
       skill2: 'css',
-      skill3: 'javaScript'
+      skill3: 'javaScript',
     },
   },
 
@@ -86,11 +85,11 @@ const projectDetails = [
     skills: {
       skill1: 'html',
       skill2: 'css',
-      skill3: 'javaScript'
+      skill3: 'javaScript',
     },
   },
 
-]
+];
 
 projectDetails.forEach((projects, index) => {
   const section = document.createElement('div');
@@ -98,9 +97,7 @@ projectDetails.forEach((projects, index) => {
   const isSecond = index === 1;
   const isLast = index === 3;
   const reverseClass = isSecond ? 'inner-second-containerr' : '';
-  const marginB = isLast ? 'inner-second-containerl' : ''; 
-
-
+  const marginB = isLast ? 'inner-second-containerl' : '';
 
   section.innerHTML = `
     <section class = "second-container">
@@ -148,12 +145,11 @@ projectDetails.forEach((projects, index) => {
   const allButton = document.querySelectorAll('.all-button');
   const pop = document.querySelector('.pop');
 
-  allButton.forEach(btn => {
-    btn.addEventListener('click', e => {
-      let {id} = e.target;
+  allButton.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      let { id } = e.target;
       id = Number(id);
-
-      if(id === projects.id){
+      if (id === projects.id) {
         pop.innerHTML = ` 
           <div class = "pop-up">
             <div class = "top">
@@ -196,7 +192,7 @@ projectDetails.forEach((projects, index) => {
 
         const closeBtn = document.querySelector('.close-btn');
 
-        closeBtn.addEventListener('click', e => {
+        closeBtn.addEventListener('click', (e) => {
           e.preventDefault();
 
           pop.innerHTML = '';
