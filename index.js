@@ -209,3 +209,19 @@ projectDetails.forEach((projects, index) => {
     });
   });
 });
+
+//Form Validation
+
+
+const form = document.forms[0];
+form.addEventListener('submit', (e) => {
+  const email = form.elements.email.value;
+  const errorMsg = document.querySelector('.error');
+  if (email === email.toLowerCase()) {
+    form.onsubmit();
+  } else {
+    errorMsg.innerHTML = 'Email should be lowercase';
+    errorMsg.classList.remove('hidden');
+  }
+  e.preventDefault();
+});

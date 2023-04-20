@@ -798,4 +798,14 @@ form #type-msg {
   }
 
   /* pop up */
+
+  /* form validation error */
+
+  .error {
+    background-color: #fff;
+    color: red;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 5px;
+  }
 }
