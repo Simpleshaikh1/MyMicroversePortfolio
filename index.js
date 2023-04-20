@@ -103,7 +103,7 @@ projectDetails.forEach((projects, index) => {
     <section class = "second-container">
       <div class = "inner-second-container ${reverseClass} ${marginB}">
         <div class = "top-image same ${projects.id}">
-          <img src="${projects.mobileImg}" class="mobile-first-card ${projects.id}"></img>
+          <img src=" ${projects.mobileImg} " class="mobile-first-card ${projects.id}"></img>
           <img src="${projects.desktopImg}" class="desktop-first-card ${projects.id}"></img>
         </div>
 
