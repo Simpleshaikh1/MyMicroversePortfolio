@@ -7,6 +7,11 @@
   font-family: Poppins;
 }
 
+/* error message */
+.hidden {
+  display: none;
+}
+
 .wrapper {
   width: 375px;
   background-color: #e5e5e5;
@@ -574,6 +579,23 @@ form #type-msg {
   position: relative;
 }
 
+.overlay {
+  filter: blur(10px);
+  mix-blend-mode: multiply;
+  background: #c1c7d0;
+}
+
+.error {
+  width: auto;
+  height: auto;
+  background-color: #fff;
+  color: red;
+  font-family: 'poppins', sans-serif;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
 @media only screen and (min-width: 768px) {
   .wrapper {
     width: auto;
@@ -798,4 +820,10 @@ form #type-msg {
   }
 
   /* pop up */
+
+  .overlay {
+    filter: blur(10px);
+    mix-blend-mode: multiply;
+    background: #c1c7d0;
+  }
 }

@@ -128,7 +128,7 @@ projectDetails.forEach((projects, index) => {
           </ul>
 
           <div>
-            <button id = "second-container-button" class = "all-button"> See Project </button>
+            <button id="second-container-button" class="all-button"> See Project </button>
           </div>
 
         </div>
@@ -205,3 +205,35 @@ projectDetails.forEach((projects, index) => {
     });
   });
 });
+
+const form = document.forms[0];
+form.addEventListener('submit', (e) => {
+  const email = form.elements.email.value;
+  const errorMsg = document.querySelector('.error');
+  if (email === email.toLowerCase()) {
+    form.onsubmit();
+  } else {
+    errorMsg.innerHTML = 'Email should be lowercase';
+    errorMsg.classList.remove('hidden');
+  }
+  e.preventDefault();
+});
+const changeEvent = () => {
+  const userName = document.querySelector('.name-input').value;
+  const userEmail = document.querySelector('.email-input').value;
+  const message = document.querySelector('textarea').value;
+  const data = {
+    name: userName,
+    email: userEmail,
+    message,
+  };
+  const jsonData = JSON.stringify(data);
+  localStorage.setItem('data', jsonData);
+};
+const localData = JSON.parse(localStorage.getItem('data'));
+document.querySelector('.name-input').value = localData.name;
+document.querySelector('.email-input').value = localData.email;
+document.querySelector('textarea').value = localData.message;
+
+const sendBtn = document.querySelector('.sec-btn');
+sendBtn.addEventListener('change', changeEvent);
