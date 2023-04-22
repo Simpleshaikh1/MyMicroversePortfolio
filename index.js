@@ -1,239 +1,285 @@
-const hamburgMenu = document.querySelector('.right-hamburger');
-const menuList = document.querySelector('.nav-li');
-const xMen = document.querySelector('.x-men');
+const menuBtn = document.querySelector('#open-menu');
+const mobileMenu = document.querySelector('.mobile-nav');
+const closeBtn = document.querySelector('#close-menu');
+const menuItems = document.querySelectorAll('#mobile-menu');
 
-hamburgMenu.addEventListener('click', () => {
-  menuList.classList.toggle('nav-active');
+menuBtn.addEventListener('click', () => {
+  menuBtn.classList.toggle('is-active');
+  mobileMenu.classList.toggle('is-active');
 });
 
-xMen.addEventListener('click', () => {
-  xMen.classList.toggle('nav-active');
+closeBtn.addEventListener('click', () => {
+  mobileMenu.classList.remove('is-active');
 });
 
-menuList.addEventListener('click', () => {
-  menuList.classList.toggle('nav-active');
-});
-
-// cards
-
-const projectDetails = [
-  {
-    id: 1,
-    name: 'Tonic',
-    title: 'Canopy',
-    stack: 'Back End Dev',
-    year: '2015',
-    description: 'Experimental content creation feature that allows users to add to an existing stay over the course of a day without spamming their friends',
-    mobileImg: './assets/Snapshoot Portfolio.png',
-    desktopImg: './assets/first-desktop-card.png',
-    live: '#',
-    source: '#',
-    skills: {
-      skill1: 'html',
-      skill2: 'css',
-      skill3: 'javaScript',
-    },
-  },
-
-  {
-    id: 2,
-    name: 'Multi-Post Stories',
-    title: 'Canopy',
-    stack: 'Back End Dev',
-    year: '2015',
-    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    mobileImg: './assets/Snapshoot Portfolio 2.png',
-    desktopImg: './assets/second-desktop-card.png',
-    live: '#',
-    source: '#',
-    skills: {
-      skill1: 'html',
-      skill2: 'css',
-      skill3: 'javaScript',
-    },
-  },
-
-  {
-    id: 3,
-    name: 'Tonic',
-    title: 'Canopy',
-    stack: 'Back End Dev',
-    year: '2015',
-    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    mobileImg: './assets/Snapshoot Portfolio 3.png',
-    desktopImg: './assets/second-desktop-card.png',
-    live: '#',
-    source: '#',
-    skills: {
-      skill1: 'html',
-      skill2: 'css',
-      skill3: 'javaScript',
-    },
-  },
-
-  {
-    id: 4,
-    name: 'Multi-Post Stories',
-    title: 'Canopy',
-    stack: 'Back End Dev',
-    year: '2015',
-    description: 'Experimental content creation feature that allows users to add to an existing stay over the course of a day without spamming their friends.',
-    mobileImg: './assets/Snapshoot Portfolio 4.png',
-    desktopImg: './assets/fourth-desktop-card.png',
-    live: '#',
-    source: '#',
-    skills: {
-      skill1: 'html',
-      skill2: 'css',
-      skill3: 'javaScript',
-    },
-  },
-
-];
-
-projectDetails.forEach((projects, index) => {
-  const section = document.createElement('div');
-
-  const isSecond = index === 1;
-  const isLast = index === 3;
-  const reverseClass = isSecond ? 'inner-second-containerr' : '';
-  const marginB = isLast ? 'inner-second-containerl' : '';
-
-  section.innerHTML = `
-    <section class = "second-container">
-      <div class = "inner-second-container ${reverseClass} ${marginB}">
-        <div class = "top-image same ${projects.id}">
-          <img src=" ${projects.mobileImg} " class="mobile-first-card ${projects.id}"></img>
-          <img src="${projects.desktopImg}" class="desktop-first-card ${projects.id}"></img>
-        </div>
-
-        <div class = "text-inner-container same">
-          <h2> ${projects.name}</h2>
-          <div class = "canopy-inner-container">
-            <p id ="text1"> ${projects.title} </p>
-            <ul> 
-              <li> ${projects.stack} </li> 
-              <li> ${projects.year} </li> 
-            </ul>
-          </div>
-
-          <div class = "canopy-daily"> 
-            <p> ${projects.description} </p>
-          </div>
-              
-          <ul class = "canopy-list"> 
-            <li> ${projects.skills.skill1} </li>
-            <li> ${projects.skills.skill2} </li>
-            <li> ${projects.skills.skill3} </li> 
-          </ul>
-
-          <div>
-            <button id="second-container-button" class="all-button"> See Project </button>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-              
-  `;
-
-  const sections = document.querySelector('.second-container');
-  sections.append(section);
-
-  const allButton = document.querySelectorAll('.all-button');
-  const pop = document.querySelector('.pop');
-
-  allButton.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      let { id } = e.target;
-      id = Number(id);
-      if (id === projects.id) {
-        pop.innerHTML = ` 
-          <div class = "pop-up">
-            <div class = "top">
-              <div class = "top-1">
-                <h2> ${projects.title} </h2>
-                <div class = "canopy-inner-container">
-                  <p id = "text1"> ${projects.title} </p>
-                  <ul> <li> ${projects.stack} </li> </ul>
-                  <ul> <li> ${projects.year} </li> </ul>
-                </div>
-              </div>
-
-              <div class="upper-2">
-                <i class="fa-solid fa-xmark close-btns"></i>
-              </div>
-
-            </div>
-
-            <img src = "${projects.img}" class = "mobile-first-card">
-
-            <div class = "canopy-daily">
-              <p> ${projects.description} </p>
-
-              <div class = "canopy-list">
-                <ul> <li> ${projects.skills.skill1} </li> </ul>
-                <ul> <li> ${projects.skills.skill2} </li> </ul>
-                <ul> <li> ${projects.skills.skill3} </li> </ul>
-              </div>
-
-              <div class="btns">
-                <button class="project-btn">See live&nbsp; <img src="./assets/Icon.png" alt=""></button>
-                <button class="project-btn">See source &nbsp;<img src="./assets/github.svg" alt=""> </button>
-              </div>
-            </div>
-          </div>
-        `;
-
-        document.querySelector('.top-container').classList.add('overlay');
-        sections.classList.add('overlay');
-
-        const closeBtn = document.querySelector('.close-btn');
-
-        closeBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-
-          pop.innerHTML = '';
-
-          document.querySelector('.top-container').classList.remove('overlay');
-
-          sections.classList.remove('overlay');
-        });
-      }
-    });
+menuItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    mobileMenu.classList.remove('is-active');
   });
 });
 
-const form = document.forms[0];
-form.addEventListener('submit', (e) => {
-  const email = form.elements.email.value;
-  const errorMsg = document.querySelector('.error');
-  if (email === email.toLowerCase()) {
-    form.onsubmit();
-  } else {
-    errorMsg.innerHTML = 'Email should be lowercase';
-    errorMsg.classList.remove('hidden');
-  }
-  e.preventDefault();
-});
-const changeEvent = () => {
-  const userName = document.querySelector('.name-input').value;
-  const userEmail = document.querySelector('.email-input').value;
-  const message = document.querySelector('textarea').value;
-  const data = {
-    name: userName,
-    email: userEmail,
-    message,
-  };
-  const jsonData = JSON.stringify(data);
-  localStorage.setItem('data', jsonData);
-};
-const localData = JSON.parse(localStorage.getItem('data'));
-document.querySelector('.name-input').value = localData.name;
-document.querySelector('.email-input').value = localData.email;
-document.querySelector('textarea').value = localData.message;
+const cards = [
+  {
+    id: 1,
+    title2: 'Multi Post Stories',
+    title1: 'Keeping track of hundreds  of components website',
+    title3: 'Profesional Art Printing Data',
+    title4: 'Data Dashboard Healthcare',
+    title5: 'Website Portfolio',
+    title6: 'Profesional Art Printing Data More',
+    tags: ['HTML', 'Bootstrap', 'Ruby on Rails'],
+    img1: './assets/Snapshoot-Portfolio.png',
+    img2: './assets/Snapshoot-Portfolio1.png',
+    description1:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+    description2:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.',
+    description3:
+      'Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.',
+    seelive: 'See live',
+    seesource: 'See source',
+  },
+  {
+    id: 2,
+    title: 'My Recent Works',
+    img1: './assets/pic.png',
+    img2: './assets/gymnst.png',
+    heading: 'Multi-Post Stories',
+    description1:
+      'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
+    description2:
+      'A daily selection of privately personalized reads; no accounts or sign-ups required. This has been the industry standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
+    tags: ['CSS', 'HTML', 'Bootstrap', 'Ruby'],
+    button: 'see project',
+  },
+  {
+    id: 3,
+    img1: './assets/projects-backgound.png',
+    img2: './assets/whitebg.png',
+    title1: 'Profesional Art Printing Data',
+    title3: '',
+    description1:
+      'A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry standard.',
+    tags: ['HTML', 'Bootstrap', 'Ruby'],
+    button: 'see project',
+  },
+  {
+    id: 4,
+    img1: './assets/projects-backgound.png',
+    img2: './assets/bg2.png',
+    title1: 'Profesional Art Printing Data',
+    title3: '',
+    title2: 'Data Dashboard Healthcare',
+    description1:
+      'A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry standard.',
+    tags: ['HTML', 'Bootstrap', 'Ruby'],
+    button: 'see project',
+  },
+  {
+    id: 5,
+    img1: './assets/projects-backgound.png',
+    img2: './assets/bg3.png',
+    title1: 'Profesional Art Printing Data',
+    title2: '',
+    title3: 'Website Portfolio',
+    description1:
+      'A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry standard.',
+    tags: ['HTML', 'Bootstrap', 'Ruby'],
+    button: 'see project',
+  },
+  {
+    id: 6,
+    img1: './assets/projects-backgound.png',
+    img2: './assets/bg4.png',
+    title1: 'Profesional Art Printing Data',
+    title2: 'Profesional Art Printing Data More',
+    title3: '',
+    description1:
+      'A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry standard.',
+    tags: ['HTML', 'Bootstrap', 'Ruby'],
+    button: 'see project',
+  },
+  {
+    id: 7,
+    img1: './assets/projects-backgound.png',
+    img2: './assets/bg5.png',
+    title1: 'Profesional Art Printing Data',
+    title2: 'Data Dashboard Healthcare',
+    title3: '',
+    description1:
+      'A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry standard.',
+    tags: ['HTML', 'Bootstrap', 'Ruby'],
+    button: 'see project',
+  },
+  {
+    id: 8,
+    img1: './assets/projects-backgound.png',
+    img2: './assets/bg6.png',
+    title1: 'Profesional Art Printing Data',
+    title2: '',
+    title3: 'Website Portfolio',
+    description1:
+      'A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry standard.',
+    tags: ['HTML', 'Bootstrap', 'Ruby'],
+    button: 'see project',
+  },
+];
 
-const sendBtn = document.querySelector('.sec-btn');
-sendBtn.addEventListener('change', changeEvent);
+// function to display cardss
+function displayCard(card) {
+  const worksElement = document.getElementById('works');
+  // create the card HTML
+  const cardHTML = `
+    <div class='recent-works'>
+      <div class='flex'>
+        <h1>${card.title}</h1>
+        <hr class='hor' >
+      </div>
+      <div class='grid'>
+        <div class='gymnast'></div>
+        <div>     
+          <h2 class='recent1'>${card.heading}</h2>
+          <p class='recentp'>${card.description1}</p>
+          <div class='languages'>
+            <ul class='langu'>
+              ${card.tags.map((tag) => `<li><button id='btn-btn' class='works-btn' type='button'>${tag}</button></li>`).join('')}
+            </ul>
+          </div>
+
+          <button class='see' data-modal-target='#modal'>${card.button}</button>
+        </div>    
+  `;
+  // add the card HTML to the 'works' element
+  worksElement.innerHTML = cardHTML;
+}
+displayCard(cards[1]);
+
+const Cards = document.querySelector('.recent');
+
+function display() {
+  const firstCard = `
+    <div class='see-proj'>
+      <div class='projects-background' id='bg1'> 
+        <div class='background'>
+        <h2 class='projects-heading' id='h'>${cards[3].title1}</h2>
+        <p class='para' id='p'>${cards[3].description1}</p>
+          <div class='project-btn'>
+            <ul class='langu'>
+            ${cards[3].tags.map((tag) => `<li><button id='pro-btn1' class='projects-btn' type='button'>${tag}</button></li>`).join('')}
+            </ul>
+          </div>
+        </div class='btn-container'>
+        <button class='sees-project' id='see-proj-btn' data-modal-target='#modal'>${cards[3].button}</button>
+      </div>
+    </div>
+  `;
+
+  let displayCard = '';
+  for (let i = 3; i < cards.length; i += 1) {
+    displayCard += `
+      <div class='see-proj'>
+        <div class='projects-background' id='bg${i - 1}'> 
+          <div class='background' >
+            <h2 class='projects-heading'>${cards[i].title1}</h2>
+            <h2 class='Desktop-heading' id='d-heading2'>${cards[i].title3}</h2>
+            <h2 class='Desktop-heading' id='d-heading'>${cards[i].title2}</h2>
+              
+            <p class='para'>${cards[i].description1}</p>
+            <div class='project-btn'>
+              <ul class='langu'>
+                ${cards[i].tags.map((tag) => `<li><button id='pro-btn' class='projects-btn' type='button'>${tag}</button></li>`).join('')}
+              </ul>
+            </div>
+          </div>
+            <button class='see-project' data-modal-target='#modal' >${cards[i].button} </button>
+        </div>
+      </div>
+    `;
+  }
+
+  const gridContainer = document.createElement('div');
+  gridContainer.classList.add('grid-container');
+  gridContainer.innerHTML = firstCard + displayCard;
+  Cards.appendChild(gridContainer);
+}
+
+display();
+
+const popUpWindow = document.getElementById('modal');
+
+function popUpDisaplay(card) {
+  const popUp = `
+    <div class='modal-view'>
+      <div class='modal-header'>
+        <div>
+          <h1 class='mod-header'>${card.title2}</h1>
+          <h1 class='mod-header1'>${card.title1}</h1>
+        </div>
+        <div>
+          <button data-close-button id='mod-button' class='fa-solid fa-xmark'></button>
+        </div>
+      </div>
+      <div class='mod-btn-container'>
+        <ul class='mod-buttons'>
+            <li><button class='mod-btn' type='button'>${card.tags[0]}</button></li>
+            <li><button class='mod-btn' type='button'>${card.tags[1]}</button></li>
+            <li><button class='mod-btn' type='button'>${card.tags[2]}</button></li>
+        </ul>
+      </div>
+      <div class='images-popup'>
+        <div>
+            <img src='${card.img1}' alt='IOT-10-image' class='mod-img'>
+            <img src='${card.img2}' alt='IOT-10-image2' class='mod-img1'>
+        </div>
+        <div class='mod-para'><p class='first'>${card.description2}<br><br>${card.description3}</p>
+            <p class='p'>${card.description1}</p>
+
+              <ul class='mod-buttons' id='modal-btn'>
+                <li><button class='mod-btns' type='button'>${card.seelive} &nbsp  <img src='./assets/Icon.png' alt='icon'></button></li>
+                <li><button class='mod-btns' type='button'>${card.seesource} &nbsp <img src='./assets/Icon2.png' alt='icon'></button></li>
+            </ul>
+        </div> 
+      </div>
+      <div id='overlay'></div>
+    </div>
+  `;
+  popUpWindow.innerHTML = popUp;
+}
+popUpDisaplay(cards[0]);
+
+const openModalButtons = document.querySelectorAll('[data-modal-target]');
+const closeModalButtons = document.querySelectorAll('[data-close-button]');
+const overlay = document.getElementById('overlay');
+
+function openModal(modal) {
+  if (modal == null) return;
+  modal.classList.add('active');
+  overlay.classList.add('active');
+}
+
+function closeModal(modal) {
+  if (modal == null) return;
+  modal.classList.remove('active');
+  overlay.classList.remove('active');
+}
+
+openModalButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget);
+    openModal(modal);
+  });
+});
+
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active');
+  modals.forEach((modal) => {
+    closeModal(modal);
+  });
+});
+
+closeModalButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('#modal');
+    closeModal(modal);
+  });
+});
