@@ -93,18 +93,17 @@ const projectDetails = [
 
 projectDetails.forEach((projects, index) => {
   const section = document.createElement('div');
-
   const isSecond = index === 1;
   const isLast = index === 3;
   const reverseClass = isSecond ? 'inner-second-containerr' : '';
   const marginB = isLast ? 'inner-second-containerl' : '';
 
   section.innerHTML = `
-    <section class = "second-container">
+  <section class = "second-container">
       <div class = "inner-second-container ${reverseClass} ${marginB}">
         <div class = "top-image same ${projects.id}">
-          <img src=" ${projects.mobileImg} " class="mobile-first-card ${projects.id}"></img>
-          <img src="${projects.desktopImg}" class="desktop-first-card ${projects.id}"></img>
+        <img src=" ${projects.mobileImg} " class="mobile-first-card ${projects.id}"></img>
+        <img src="${projects.desktopImg}" class="desktop-first-card ${projects.id}"></img>
         </div>
 
         <div class = "text-inner-container same">
@@ -117,45 +116,45 @@ projectDetails.forEach((projects, index) => {
             </ul>
           </div>
 
-          <div class = "canopy-daily"> 
-            <p> ${projects.description} </p>
-          </div>
-              
-          <ul class = "canopy-list"> 
-            <li> ${projects.skills.skill1} </li>
-            <li> ${projects.skills.skill2} </li>
-            <li> ${projects.skills.skill3} </li> 
-          </ul>
-
-          <div>
-            <button id="second-container-button" class="all-button"> See Project </button>
-          </div>
-
+        <div class = "canopy-daily"> 
+          <p> ${projects.description} </p>
         </div>
-
+          
+        <ul class = "canopy-list"> 
+          <li> ${projects.skills.skill1} </li>
+          <li> ${projects.skills.skill2} </li>
+          <li> ${projects.skills.skill3} </li> 
+        </ul>
+          
+        <div>
+          <button id="${projects.id}" class="all-button" type="submit"> See Project </button>
+        </div>
+          
       </div>
-
-    </section>
-              
+          
+    </div>
+          
+  </section>
+          
   `;
 
   const sections = document.querySelector('.second-container');
   sections.append(section);
 
-  const allButton = document.querySelectorAll('.all-button');
+  const openModal = document.querySelectorAll('.all-button');
   const pop = document.querySelector('.pop');
-
-  allButton.forEach((btn) => {
+  const popSection = document.createElement('div');
+  openModal.forEach((btn) => {
     btn.addEventListener('click', (e) => {
       let { id } = e.target;
       id = Number(id);
       if (id === projects.id) {
-        pop.innerHTML = ` 
+        popSection.innerHTML = ` 
           <div class = "pop-up">
             <div class = "top">
               <div class = "top-1">
-                <h2> ${projects.title} </h2>
-                <div class = "canopy-inner-container">
+                <h2> ${projects.name} </h2>
+                <div class = "line">
                   <p id = "text1"> ${projects.title} </p>
                   <ul> <li> ${projects.stack} </li> </ul>
                   <ul> <li> ${projects.year} </li> </ul>
@@ -163,21 +162,22 @@ projectDetails.forEach((projects, index) => {
               </div>
 
               <div class="upper-2">
-                <i class="fa-solid fa-xmark close-btns"></i>
+                <i class="fa-solid fa-xmark close-btns">X</i>
               </div>
 
             </div>
 
-            <img src = "${projects.img}" class = "mobile-first-card">
+            
+            <img src="${projects.mobileImg}" class = " pop-img mobile-first-card">
 
-            <div class = "canopy-daily">
-              <p> ${projects.description} </p>
-
+            <div class = "wrap">
+              <div class="description"><p> ${projects.description} </p></div>
               <div class = "canopy-list">
                 <ul> <li> ${projects.skills.skill1} </li> </ul>
                 <ul> <li> ${projects.skills.skill2} </li> </ul>
                 <ul> <li> ${projects.skills.skill3} </li> </ul>
               </div>
+              <hr class ="hr-line" />
 
               <div class="btns">
                 <button class="project-btn">See live&nbsp; <img src="./assets/Icon.png" alt=""></button>
@@ -187,18 +187,16 @@ projectDetails.forEach((projects, index) => {
           </div>
         `;
 
+        pop.append(popSection);
+
         document.querySelector('.top-container').classList.add('overlay');
         sections.classList.add('overlay');
 
-        const closeBtn = document.querySelector('.close-btn');
-
+        const closeBtn = document.querySelector('.close-btns');
         closeBtn.addEventListener('click', (e) => {
           e.preventDefault();
-
           pop.innerHTML = '';
-
           document.querySelector('.top-container').classList.remove('overlay');
-
           sections.classList.remove('overlay');
         });
       }
