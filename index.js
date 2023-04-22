@@ -168,7 +168,8 @@ projectDetails.forEach((projects, index) => {
             </div>
 
             
-            <img src="${projects.mobileImg}" class = " pop-img mobile-first-card">
+            <img src="${projects.desktopImg}" class = " pop-img-desktop desktop-first-card">
+            <img src="${projects.mobileImg}" class = " pop-img-mobile mobile-first-card">
 
             <div class = "wrap">
               <div class="description"><p> ${projects.description} </p></div>

@@ -637,7 +637,7 @@ form #type-msg {
   transition: all;
 }
 
-.pop-img {
+.pop-img-mobile {
   width: 100%;
   margin-top: 18px;
 }
@@ -721,13 +721,17 @@ form #type-msg {
     width: 15%;
   }
 
-  /* .mobile-first-card {
-    display: none;
-  } */
-
-  .pop-img {
-    width: 80%;
+  .pop-img-desktop {
+    width: 100%;
     height: 120%;
+  }
+
+  .desktop-first-card {
+    display: block;
+  }
+
+  .mobile-first-card {
+    display: none;
   }
 
   .inner-second-container {
